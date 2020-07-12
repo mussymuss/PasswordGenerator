@@ -1,10 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-// function writePassword() {
-//     var password = generatePassword();
-// }
+//Write password function
 
 function writePassword(){
   getPasswordlenght();
@@ -46,7 +43,6 @@ function getPasswordlenght() {
     alert('Password length must be provided as a number');
     getPasswordlenght();
   }
-  console.log(passLength);
 }
 
 function getOptions(){
@@ -104,6 +100,7 @@ function getOptions(){
 };
 
 function finalPass(){
+  final = '';
   for (var i = 0; i < passLength; i++) {
     randomChar = Math.floor(Math.random() * charSelected.length);
     final += charSelected[randomChar];
